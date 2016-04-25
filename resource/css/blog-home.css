@@ -1,0 +1,78 @@
+
+.row {
+    border: none;
+    margin: 0px 5px;
+    padding: 20px;
+
+}
+
+a {
+    background-color: transparent;
+    color: lime;
+}
+
+
+a:active,
+a:hover {
+    outline: 0;
+    color: #dddddd;
+    text-decoration: none;
+}
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+
+        .nav-img{
+            float: left;
+            padding-top: 0px;
+            margin-top: -10px;
+            margin-right: 10px;
+        }
+
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    color: #dddddd;
+    border: 0px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    font-family: verdana;
+}
+
+p.well-p{
+    line-height: 200%;
+}
+
+.btn-close {
+    background-image: url("/buttons/bluecross.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    margin-left: 30px;
+    border: 50%;
+    margin-top: 16px;
+    width: 36px;
+}
+.btn-close:hover {
+    transform: rotate(270deg);
+}
+
+.hover-animate {
+    cursor: hand;
+    transition: 0.5s;
+}
+
+
+
+
+.Password_recovery a{
+    color: blue;
+
+}
