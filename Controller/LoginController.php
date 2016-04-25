@@ -26,7 +26,10 @@ if(isset($_POST['login']))
         $_SESSION['email'] = $user[0]['email'];
 
         //var_dump($_SESSION);
+        header("Location: ../index.php");
     }
+    else
+        echo "Incorrect Email/Password";
 
 
 }
