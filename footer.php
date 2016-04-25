@@ -26,7 +26,7 @@
             <?php
             $select  = new Select();
             $sql =  "SELECT * FROM categories";
-            $rows = $select->SelectAll($sql);
+            $rows = $select->Select($sql);
             foreach($rows as $row){ ?>
                 <li value=""><a href="category/<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></li>
             <?php  } ?>

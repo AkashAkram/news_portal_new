@@ -10,13 +10,13 @@ class Select
     }
 
 
-    public function SelectAll($query)
+    public function Select($query)
     {
 
         $connect = mysqli_connect('localhost','root','','akashakr_amarblogdb');
 
         $result = mysqli_query($connect,$query);
-
+        $rows = array();
         while ($row = mysqli_fetch_assoc($result)) {
             $rows[] = $row;
         }
@@ -26,7 +26,7 @@ class Select
 
 
 
-
+/*
     public function SelectSingleRow($query)
     {
 
@@ -37,7 +37,7 @@ class Select
         return $row;
     }
 
-
+*/
 
     public function SelectRowCount($query)
     {

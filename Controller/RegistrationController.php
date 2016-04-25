@@ -30,15 +30,25 @@ if(isset($_POST['register']))
         $sql2 = " INSERT INTO `users` (`id`, `name`, `role`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES (NULL, '".$_POST['name']."', 'user', '".$_POST['email']."', '".$_POST['password']."', NULL, NULL, '0000-00-00 00:00:00.000000'); ";
         $insert->newEntry($sql2);
 
-        header("Location: index.php");
+        $sql3 = "SELECT * FROM users WHERE `name` = '".$_POST['name']."' AND `email` = '".$email."'" ;
+        $user = $select ->SelectAll($sql3);
+        echo $user[0]['password'];
+        $_SESSION['id'] = $user[0]['id'];
+        $_SESSION['name'] = $user[0]['name'];
+        $_SESSION['email'] = $user[0]['email'];
+
+
+
+        //header("Location: ../index.php");
     }
     else
     {
-        header("Location: register.php");
+
         if($_POST['password'] != $_POST['password_confirmation'])
             echo "Sorry, Password didn't matched !<br>";
         if($numRow>0)
             echo "This Email is Already registered, Try Another Email";
+        //header("Location: ../register.php");
     }
 
 

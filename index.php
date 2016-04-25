@@ -5,8 +5,11 @@
     include('header.php');
 
     $select = new Select();
-    $sql =  "SELECT * FROM articles ORDER BY id DESC ";
-    $rows = $select->SelectAll($sql);
+    $sql1 =  "SELECT * FROM articles ORDER BY id DESC ";
+    $rows = $select->Select($sql1);
+
+
+
 ?>
 
 <div class="col-md-8">
@@ -15,6 +18,8 @@
 foreach ($rows as $row)
 {
 
+    $sql2 = "SELECT * FROM users WHERE `id` = '".$row['author_id']."'";
+    $author = $select->Select($sql2);
     ?>
 
     <div class="well">
@@ -22,7 +27,7 @@ foreach ($rows as $row)
             <a href="post/<?php  ?>"><?php echo $row["title"] ?></a>
         </h2>
         <p >
-            by <a href="/"><?php echo $row['author_id'] ?></a> |
+            by <a href="/"><?php echo $author[0]['name'] ?></a> |
             <span class="glyphicon glyphicon-time"></span> <?php echo $row['created_at'] ?>
 
 
