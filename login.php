@@ -40,7 +40,7 @@ include ('Model/SelectClass.php');
 
                             <div class="form-group">
                                 <div class="col-md-6 col-md-offset-4">
-                                    <button type="submit" class="btn btn-primary">
+                                    <button type="submit" class="btn btn-primary" name="login">
                                         <i class="fa fa-btn fa-sign-in"></i>Login
                                     </button>
                                     <span class="Password_recovery"><a href="/password_recovery">Forgot Password ?</a></span>

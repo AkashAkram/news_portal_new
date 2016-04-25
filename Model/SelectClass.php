@@ -4,13 +4,9 @@
 class Select
 {
 
-    function __construct()
-    {
-
-    }
 
 
-    public function Select($query)
+    public function SelectRow($query)
     {
 
         $connect = mysqli_connect('localhost','root','','akashakr_amarblogdb');
@@ -37,7 +33,7 @@ class Select
         return $row;
     }
 
-*/
+
 
     public function SelectRowCount($query)
     {
@@ -48,6 +44,6 @@ class Select
         return $numrows;
     }
 
-
+*/
 
 }

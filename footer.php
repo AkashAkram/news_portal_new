@@ -24,9 +24,10 @@
 
         <ul class="list-unstyled well-custom-list">
             <?php
-            $select  = new Select();
+           
+            $select = new Select();
             $sql =  "SELECT * FROM categories";
-            $rows = $select->Select($sql);
+            $rows = $select->SelectRow($sql);
             foreach($rows as $row){ ?>
                 <li value=""><a href="category/<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></li>
             <?php  } ?>

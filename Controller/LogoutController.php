@@ -6,3 +6,5 @@
  * Time: 12:23 PM
  */
 
+$_SESSION = array();
+header("Location: ../login.php");

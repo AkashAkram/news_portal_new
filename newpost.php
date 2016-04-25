@@ -41,7 +41,7 @@ $select = new Select();
                             <select name="category_id" id="" class="form-control">
                                 <?php
                                 $sql =  "SELECT * FROM categories";
-                                $rows = $select->Select($sql);
+                                $rows = $select->SelectRow($sql);
                                 foreach($rows as $row){
                                 ?>
                                     <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>

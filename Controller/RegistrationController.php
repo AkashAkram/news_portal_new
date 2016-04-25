@@ -19,19 +19,17 @@ if(isset($_POST['register']))
 
     $sql1 = "SELECT * FROM users WHERE `email` = '".$email."' ";
 
-    $numRow = $select->SelectRowCount($sql1);
+    $row = $select->SelectRow($sql1);
 
-        //var_dump($row);
-        //echo $numRow;
-        //echo $row['email'];
 
-    if( $numRow==0 && ($_POST['password'] == $_POST['password_confirmation']) )
+
+    if( count($row)==0 && ($_POST['password'] == $_POST['password_confirmation']) )
     {
         $sql2 = " INSERT INTO `users` (`id`, `name`, `role`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES (NULL, '".$_POST['name']."', 'user', '".$_POST['email']."', '".$_POST['password']."', NULL, NULL, '0000-00-00 00:00:00.000000'); ";
-        $insert->newEntry($sql2);
+        $insert->InsertRow($sql2);
 
         $sql3 = "SELECT * FROM users WHERE `name` = '".$_POST['name']."' AND `email` = '".$email."'" ;
-        $user = $select ->SelectAll($sql3);
+        $user = $select ->SelectRow($sql3);
         echo $user[0]['password'];
         $_SESSION['id'] = $user[0]['id'];
         $_SESSION['name'] = $user[0]['name'];
@@ -39,15 +37,15 @@ if(isset($_POST['register']))
 
 
 
-        //header("Location: ../index.php");
+        header("Location: ../index.php");
     }
     else
     {
 
         if($_POST['password'] != $_POST['password_confirmation'])
             echo "Sorry, Password didn't matched !<br>";
-        if($numRow>0)
-            echo "This Email is Already registered, Try Another Email";
+        if(count($row)>0)
+            echo "This Email is Already registered, Try Another Email<br>";
         //header("Location: ../register.php");
     }
 

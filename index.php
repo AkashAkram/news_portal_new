@@ -6,7 +6,7 @@
 
     $select = new Select();
     $sql1 =  "SELECT * FROM articles ORDER BY id DESC ";
-    $rows = $select->Select($sql1);
+    $rows = $select->SelectRow($sql1);
 
 
 
@@ -19,7 +19,7 @@ foreach ($rows as $row)
 {
 
     $sql2 = "SELECT * FROM users WHERE `id` = '".$row['author_id']."'";
-    $author = $select->Select($sql2);
+    $author = $select->SelectRow($sql2);
     ?>
 
     <div class="well">
