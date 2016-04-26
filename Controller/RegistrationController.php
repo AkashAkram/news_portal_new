@@ -30,11 +30,13 @@ if(isset($_POST['register']))
 
         $sql3 = "SELECT * FROM users WHERE `name` = '".$_POST['name']."' AND `email` = '".$email."'" ;
         $user = $select ->SelectRow($sql3);
-        echo $user[0]['password'];
+
+
+        $_SESSION = array();
         $_SESSION['id'] = $user[0]['id'];
         $_SESSION['name'] = $user[0]['name'];
         $_SESSION['email'] = $user[0]['email'];
-
+        $_SESSION['role'] = $user[0]['role'];
 
 
         header("Location: ../index.php");

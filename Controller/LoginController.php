@@ -17,8 +17,7 @@ if(isset($_POST['login']))
 
     $sql = "SELECT * FROM users WHERE `email` = '".$email."' AND `password` = '".$password."' ";
     $user = $select->SelectRow($sql);
-    //echo count($user);
-    //var_dump($user);
+
 
     if(count($user)>0)
     {
@@ -28,7 +27,7 @@ if(isset($_POST['login']))
         $_SESSION['email'] = $user[0]['email'];
         $_SESSION['role'] = $user[0]['role'];
 
-        //print_r($_SESSION);
+
         header("Location: ../index.php");
     }
     else
