@@ -6,5 +6,7 @@
  * Time: 12:23 PM
  */
 
-$_SESSION = array();
+session_start();
+//session_unset();
+session_destroy();
 header("Location: ../login.php");

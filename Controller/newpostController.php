@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include  ('../Model/InsertClass.php');
 include  ('../Model/SelectClass.php');
 
@@ -7,7 +7,7 @@ include  ('../Model/SelectClass.php');
 if(isset($_POST['postButton']))
 {
 
-    $sql1 = "SELECT * FROM users WHERE `name` = 'Akramul' AND `email` = 'akash@gmail.com' ";
+    $sql1 = "SELECT * FROM users WHERE `name` = '".$_SESSION['name']."' AND `email` = '".$_SESSION['email']."' ";
     $select = new Select();
     $row = $select->SelectRow($sql1);
     //var_dump($row);

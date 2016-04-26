@@ -1,14 +1,9 @@
 
 <?php
 
-    include('Model/SelectClass.php');
+
     include('header.php');
-
-    $select = new Select();
-    $sql1 =  "SELECT * FROM articles ORDER BY id DESC ";
-    $rows = $select->SelectRow($sql1);
-
-
+    include "Controller/indexController.php";
 
 ?>
 
@@ -30,26 +25,19 @@ foreach ($rows as $row)
             by <a href="/"><?php echo $author[0]['name'] ?></a> |
             <span class="glyphicon glyphicon-time"></span> <?php echo $row['created_at'] ?>
 
-
-
         </p>
 
         <div align="right">
-          <!--
-            @if(!Auth::guest())
-            @if($blog->author_id == Auth::user()->id)
 
-
-
-
-              @endif
-            @endif
-
-          -->
-
-            <a href="edit/post/<?php  ?>">update</a> |
-            <a href="remove/post/<?php  ?>">Delete</a>
-
+        <?php
+            if(!empty($_SESSION)){
+                if($row['author_id']==$_SESSION['id']){ ?>
+                    <a href="edit/post/<?php  ?>">update</a> |
+                    <a href="remove/post/<?php  ?>">Delete</a>
+                    <br><br>
+        <?php    }
+            }
+        ?>
 
         </div>
 

@@ -6,6 +6,7 @@
  * Time: 12:22 PM
 
  */
+session_start();
 include "../header.php";
 include  ('../Model/InsertClass.php');
 include  ('../Model/SelectClass.php');
@@ -16,7 +17,6 @@ if(isset($_POST['register']))
     $select = new Select();
     $insert = new Insert();
     $email = $_POST['email'];
-
     $sql1 = "SELECT * FROM users WHERE `email` = '".$email."' ";
 
     $row = $select->SelectRow($sql1);

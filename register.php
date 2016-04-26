@@ -1,12 +1,17 @@
 <?php
+//session_start();
+
 include ('header.php');
 include ('Model/SelectClass.php');
+
+if(!empty($_SESSION))
+    header("Location: index.php");
 ?>
     <div class="col-md-8">
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="Controller/RegistrationController.php">
+                    <form class="form-horizontal" role="form" method="POST" action="Controller/registrationController.php">
 
 
                         <div class="form-group">

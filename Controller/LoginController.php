@@ -5,6 +5,8 @@
  * Date: 25-Apr-16
  * Time: 12:23 PM
  */
+session_start();
+
 include "../Model/SelectClass.php";
 if(isset($_POST['login']))
 {
@@ -24,12 +26,18 @@ if(isset($_POST['login']))
         $_SESSION['id'] = $user[0]['id'];
         $_SESSION['name'] = $user[0]['name'];
         $_SESSION['email'] = $user[0]['email'];
+        $_SESSION['role'] = $user[0]['role'];
 
-        //var_dump($_SESSION);
+        //print_r($_SESSION);
         header("Location: ../index.php");
     }
     else
-        echo "Incorrect Email/Password";
+    {
+        header("Location: ../login.php");
+        echo "<script>alert('Incorrect Email/Password');</script>";
+
+    }
+
 
 
 }

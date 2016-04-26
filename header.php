@@ -1,3 +1,6 @@
+<?php session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,28 +52,29 @@
                 <!-- Authentication Links
 
                 @if () -->
-                <?php// if (!empty($_SESSION['name'])){ ?>
+                <?php if (empty($_SESSION)){ ?>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
 
-                <?php //} else{ ?>
+                <?php } else{ ?>
                 <li class=" "><a href="newpost.php">Create New</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <img src="resource/images/blog-cover.JPG" alt="" width="20" height="17">
-                        <?php echo "user"; ?> <span class="caret"></span>
+                        <?php echo $_SESSION['name']; ?> <span class="caret"></span>
                     </a>
 
                     <ul class="dropdown-menu" role="menu">
                        <!--  @if( Auth::User()->role == "admin" )  -->
-                        <li><a href="dashboard"><i class=""></i>Dashboard</a></li>
-                        <!-- @endif   -->
-                        <li><a href="myblog"><i class=""></i>My Blogs</a></li>
+                        <?php if ($_SESSION['role']=='admin') { ?>
+                            <li><a href="dashboard"><i class=""></i>Dashboard</a></li>
+                        <?php } ?>
+                        <li><a href="myblog.php"><i class=""></i>My Blogs</a></li>
                         <li><a href="myprofile/<?php ?>"><i class=""></i>Profile</a></li>
-                        <li><a href="Controller/LogoutController.php"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                        <li><a href="Controller/logoutController.php"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                     </ul>
                 </li>
-                <?php // } ?>
+                <?php  } ?>
             </ul>
         </div>
     </div>
