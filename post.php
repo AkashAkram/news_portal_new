@@ -1,0 +1,55 @@
+
+<?php
+
+
+include('header.php');
+include "Controller/postController.php";
+
+?>
+
+<div class="col-md-8">
+
+    <?php
+
+        $sql2 = "SELECT * FROM users WHERE `id` = '".$row[0]['author_id']."'";
+        $author = $select->SelectRow($sql2);
+        ?>
+
+        <div class="well">
+            <h2>
+                <a href="post.php?id=<?php echo $row[0]["id"]?>"> <?php echo $row[0]["title"] ?></a>
+            </h2>
+            <p >
+                by <a href="/"><?php echo $author[0]['name'] ?></a> |
+                <span class="glyphicon glyphicon-time"></span> <?php echo $row[0]['created_at'] ?>
+
+            </p>
+
+            <div align="right">
+
+                <?php
+                if(!empty($_SESSION)){
+                    if($row[0]['author_id']==$_SESSION['id']){ ?>
+                        <a href="update.php?post_id=<?php echo $row[0]['id'] ?>">update</a> |
+                        <a href="delete.php?post_id=<?php echo $row[0]['id'] ?>">Delete</a>
+                        <br><br>
+                    <?php    }
+                }
+                ?>
+
+            </div>
+
+            <a href="post/">
+                <img class="img-responsive my-image " src="resource/images/<?php echo $row[0]['cover'] ?>" alt="">
+            </a>
+
+
+            <br>
+            <p class="well-p"><?php echo $row[0]['body'] ?><br><br>
+        </div>
+
+
+</div>
+
+
+<?php include('footer.php'); ?>

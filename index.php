@@ -19,7 +19,7 @@ foreach ($rows as $row)
 
     <div class="well">
         <h2>
-            <a href="post/<?php  ?>"><?php echo $row["title"] ?></a>
+            <a href="post.php?id=<?php echo $row["id"]?>"> <?php echo $row["title"] ?></a>
         </h2>
         <p >
             by <a href="/"><?php echo $author[0]['name'] ?></a> |
@@ -32,8 +32,8 @@ foreach ($rows as $row)
         <?php
             if(!empty($_SESSION)){
                 if($row['author_id']==$_SESSION['id']){ ?>
-                    <a href="edit/post/<?php  ?>">update</a> |
-                    <a href="remove/post/<?php  ?>">Delete</a>
+                    <a href="update.php?post_id=<?php echo $row['id'] ?>">update</a> |
+                    <a href="delete.php?post_id=<?php echo $row['id'] ?>">Delete</a>
                     <br><br>
         <?php    }
             }
@@ -48,7 +48,7 @@ foreach ($rows as $row)
 
         <br>
         <p class="well-p"><?php echo substr($row['body'],0,500) ?><br><br>
-            <a class="btn btn-primary" href="../post/<?php  ?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+            <a class="btn btn-primary" href="post.php?id=<?php echo $row["id"]?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 
 
