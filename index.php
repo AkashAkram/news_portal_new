@@ -12,9 +12,13 @@
 <?php
 foreach ($rows as $row)
 {
+    $select = new Select();
 
     $sql2 = "SELECT * FROM users WHERE `id` = '".$row['author_id']."'";
     $author = $select->SelectRow($sql2);
+    $sql3 = "SELECT * FROM categories WHERE `id` = '".$row['category_id']."'";
+    $category = $select->SelectRow($sql3);
+
     ?>
 
     <div class="well">
@@ -22,7 +26,8 @@ foreach ($rows as $row)
             <a href="post.php?id=<?php echo $row["id"]?>"> <?php echo $row["title"] ?></a>
         </h2>
         <p >
-            by <a href="/"><?php echo $author[0]['name'] ?></a> |
+            by: <a href="/"><?php echo $author[0]['name'] ?></a> |
+            Category: <a href="/"><?php echo $category[0]['name'] ?></a> |
             <span class="glyphicon glyphicon-time"></span> <?php echo $row['created_at'] ?>
 
         </p>
@@ -41,7 +46,7 @@ foreach ($rows as $row)
 
         </div>
 
-        <a href="post/">
+        <a href="">
             <img class="img-responsive my-image " src="resource/images/<?php echo $row['cover'] ?>" alt="">
         </a>
 

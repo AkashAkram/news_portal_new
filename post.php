@@ -13,6 +13,9 @@ include "Controller/postController.php";
 
         $sql2 = "SELECT * FROM users WHERE `id` = '".$row[0]['author_id']."'";
         $author = $select->SelectRow($sql2);
+
+        $sql3 = "SELECT * FROM categories WHERE `id` = '".$row[0]['category_id']."'";
+        $category = $select->SelectRow($sql3);
         ?>
 
         <div class="well">
@@ -21,6 +24,7 @@ include "Controller/postController.php";
             </h2>
             <p >
                 by <a href="/"><?php echo $author[0]['name'] ?></a> |
+                Category: <a href="/"><?php echo $category[0]['name'] ?></a> |
                 <span class="glyphicon glyphicon-time"></span> <?php echo $row[0]['created_at'] ?>
 
             </p>

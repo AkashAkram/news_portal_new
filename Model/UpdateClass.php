@@ -12,7 +12,7 @@ class Update
     {
         $connect = mysqli_connect('localhost','root','','akashakr_amarblogdb');
         $result = mysqli_query($connect,$query);
-        $numrows = mysqli_num_rows($result);
-        return $numrows;
+        //$numrows = mysqli_num_rows($result);
+        return $result;
     }
 }

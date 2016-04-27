@@ -8,12 +8,11 @@
  */
 class Insert
 {
-    /**
-     * @param $query
-     */
+
     public function InsertRow($query)
     {
         $connect = mysqli_connect('localhost','root','','akashakr_amarblogdb');
-        mysqli_query($connect, $query);
+        $result = mysqli_query($connect, $query);
+        return $result;
     }
 }

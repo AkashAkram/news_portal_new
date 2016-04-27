@@ -4,6 +4,7 @@
 include ('header.php');
 include ('Model/SelectClass.php');
 
+
 if(!empty($_SESSION))
     header("Location: index.php");
 ?>
@@ -11,7 +12,7 @@ if(!empty($_SESSION))
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="Controller/registrationController.php">
+                    <form class="form-horizontal" role="form" method="POST" action="Controller/RegistrationController.php">
 
 
                         <div class="form-group">

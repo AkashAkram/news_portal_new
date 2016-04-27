@@ -1,13 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: akash
- * Date: 25-Apr-16
- * Time: 12:23 PM
- */
+
 session_start();
 
+include "../Model/SessionClass.php";
 include "../Model/SelectClass.php";
+
+
+
+
 if(isset($_POST['login']))
 {
     $select = new Select();
@@ -21,13 +21,8 @@ if(isset($_POST['login']))
 
     if(count($user)>0)
     {
-        $_SESSION = array();
-        $_SESSION['id'] = $user[0]['id'];
-        $_SESSION['name'] = $user[0]['name'];
-        $_SESSION['email'] = $user[0]['email'];
-        $_SESSION['role'] = $user[0]['role'];
-
-
+        $mysession = new Session();
+        $mysession->SessionInit($user[0]);
         header("Location: ../index.php");
     }
     else

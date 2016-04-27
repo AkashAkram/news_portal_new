@@ -2,11 +2,32 @@
 //session_start();
 
 include('header.php');
-include "Controller/updateController.php";
+include('Model/SelectClass.php');
 
 
-//echo $_GET['post_id'];
-//var_dump($blog);
+
+$select = new Select();
+
+$sql1 =  "SELECT * FROM categories";
+$rows = $select->SelectRow($sql1);
+
+$sql2 = "SELECT * FROM `articles` WHERE `id` = '".$_GET['post_id']."'";
+$blog = $select->SelectRow($sql2);
+
+
+//echo $blog[0]['author_id'];
+
+
+if(empty($_SESSION) or $_SESSION['id']!=$blog[0]['author_id'])
+{
+    header("Location: index.php");
+}
+
+else{
+    $_SESSION['post_id'] = $_GET['post_id'];
+    echo $_SESSION['post_id'];
+}
+
 ?>
 
     <div class="col-md-8">
@@ -25,12 +46,6 @@ include "Controller/updateController.php";
                             </div>
                         </div>
 
-
-                        <div class="form-group">
-                            <div class="col-md-6">
-                                <input type="hidden" class="form-control" name="author" value="authorname" >
-                            </div>
-                        </div>
                         <div class="form-group">
                             <label class="col-md-4 control-label">Category</label>
                             <div class="col-md-6">
@@ -49,7 +64,8 @@ include "Controller/updateController.php";
                         <div class="form-group">
                             <label class="col-md-4 control-label">Cover</label>
                             <div class="col-md-6">
-                                <input type="file" class=""  value="<?php echo $blog[0]['cover'] ?>"  name="image">
+                                <img class="img-responsive" src="resource/images/<?php echo $blog[0]['cover'] ?>" alt="No Image">
+                                <input type="file"   value=""  name="image">
                             </div>
                         </div>
 

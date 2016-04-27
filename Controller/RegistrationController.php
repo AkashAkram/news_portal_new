@@ -7,7 +7,7 @@
 
  */
 session_start();
-include "../header.php";
+
 include  ('../Model/InsertClass.php');
 include  ('../Model/SelectClass.php');
 
@@ -26,20 +26,22 @@ if(isset($_POST['register']))
     if( count($row)==0 && ($_POST['password'] == $_POST['password_confirmation']) )
     {
         $sql2 = " INSERT INTO `users` (`id`, `name`, `role`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES (NULL, '".$_POST['name']."', 'user', '".$_POST['email']."', '".$_POST['password']."', NULL, NULL, '0000-00-00 00:00:00.000000'); ";
-        $insert->InsertRow($sql2);
+        $result = $insert->InsertRow($sql2);
 
+        if($result)
+        {   $success = "Registration Successful";
+            echo "<script>alert('".$success."');</script>";
+            header("Location: ../login.php");
+        }
+
+/*
         $sql3 = "SELECT * FROM users WHERE `name` = '".$_POST['name']."' AND `email` = '".$email."'" ;
         $user = $select ->SelectRow($sql3);
 
-
-        $_SESSION = array();
-        $_SESSION['id'] = $user[0]['id'];
-        $_SESSION['name'] = $user[0]['name'];
-        $_SESSION['email'] = $user[0]['email'];
-        $_SESSION['role'] = $user[0]['role'];
-
-
+        $mysession = new Session();
+        $mysession->SessionInit($user[0]);
         header("Location: ../index.php");
+*/
     }
     else
     {
