@@ -8,10 +8,22 @@ include "../Model/SessionClass.php";
 
 if(isset($_POST['update']))
 {
-    echo "Post id in session = ".$_SESSION['post_id']."<br>";
+
+    $image    = $_FILES['image']['name'];
+    $tempName = $_FILES['image']['tmp_name'];
+
+    if(isset($image)) {
+        if (!empty($image)) {
+            $location = "../resource/images/";
+            move_uploaded_file($tempName, $location.$image);
+        }
+    }
+
+
+    //echo "Post id in session = ".$_SESSION['post_id']."<br>";
     $update = new Update();
 
-    $sql3 = "UPDATE `articles` SET `title` = '".$_POST['title']."', `category_id` = '".$_POST['category_id']."', `body` = '".$_POST['body']."' WHERE `articles`.`id` = '".$_SESSION['post_id']."'";
+    $sql3 = "UPDATE `articles` SET `title` = '".$_POST['title']."', `cover` = '".$image."', `category_id` = '".$_POST['category_id']."', `body` = '".$_POST['body']."' WHERE `articles`.`id` = '".$_SESSION['post_id']."'";
     $result = $update->updateRow($sql3);
 
     //`cover` = '".$_POST['image']."',

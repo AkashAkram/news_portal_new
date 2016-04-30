@@ -25,7 +25,7 @@ if(empty($_SESSION) or $_SESSION['id']!=$blog[0]['author_id'])
 
 else{
     $_SESSION['post_id'] = $_GET['post_id'];
-    echo $_SESSION['post_id'];
+    //echo $_SESSION['post_id'];
 }
 
 ?>
@@ -64,7 +64,14 @@ else{
                         <div class="form-group">
                             <label class="col-md-4 control-label">Cover</label>
                             <div class="col-md-6">
-                                <img class="img-responsive" src="resource/images/<?php echo $blog[0]['cover'] ?>" alt="No Image">
+                                <img class="img-responsive" src="resource/images/<?php
+                                      //  if($blog[0]['cover']==$_FILES['image']['name'])
+                                      //     echo $_FILES['image']['name'];
+                                      //  else
+                                            echo $blog[0]['cover']; ?>
+
+                                " alt="No Image"><br>
+                                <?php echo $blog[0]['cover'] ?><br>
                                 <input type="file"   value=""  name="image">
                             </div>
                         </div>

@@ -34,14 +34,7 @@ if(isset($_POST['register']))
             header("Location: ../login.php");
         }
 
-/*
-        $sql3 = "SELECT * FROM users WHERE `name` = '".$_POST['name']."' AND `email` = '".$email."'" ;
-        $user = $select ->SelectRow($sql3);
 
-        $mysession = new Session();
-        $mysession->SessionInit($user[0]);
-        header("Location: ../index.php");
-*/
     }
     else
     {
