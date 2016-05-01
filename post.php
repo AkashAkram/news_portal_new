@@ -19,6 +19,9 @@ include "Controller/postController.php";
         ?>
 
         <div class="well">
+            <div align="right">
+                <a class="btn-close hover-animate" href="../"></a>
+            </div>
             <h2>
                 <a href="post.php?id=<?php echo $row[0]["id"]?>"> <?php echo $row[0]["title"] ?></a>
             </h2>
@@ -35,7 +38,7 @@ include "Controller/postController.php";
                 if(!empty($_SESSION)){
                     if($row[0]['author_id']==$_SESSION['id']){ ?>
                         <a href="update.php?post_id=<?php echo $row[0]['id'] ?>">update</a> |
-                        <a href="delete.php?post_id=<?php echo $row[0]['id'] ?>">Delete</a>
+                        <a href="Controller/deleteController.php?delete_post=<?php echo $row[0]['id'] ?>&author_id=<?php echo $row[0]['author_id'] ?>">Delete</a>
                         <br><br>
                     <?php    }
                 }
@@ -43,7 +46,7 @@ include "Controller/postController.php";
 
             </div>
 
-            <a href="post/">
+            <a href="post.php?id=<?php echo $row[0]["id"]?>">
                 <img class="img-responsive my-image " src="resource/images/<?php echo $row[0]['cover'] ?>" alt="">
             </a>
 

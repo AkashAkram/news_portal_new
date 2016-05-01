@@ -8,5 +8,11 @@
  */
 class Delete
 {
+    public function DeleteRow($query)
+    {
+        $connect = mysqli_connect('localhost','root','','akashakr_amarblogdb');
+        $result = mysqli_query($connect,$query);
 
+        return $result;
+    }
 }

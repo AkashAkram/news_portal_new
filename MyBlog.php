@@ -42,7 +42,7 @@ if(empty($_SESSION))
                 if(!empty($_SESSION)){
                     if($row['author_id']==$_SESSION['id']){ ?>
                         <a href="update.php?post_id=<?php echo $row['id'] ?>">update</a> |
-                        <a href="delete.php?post_id=<?php echo $row['id'] ?>">Delete</a>
+                        <a href="Controller/deleteController.php?delete_post=<?php echo $row['id'] ?>&author_id=<?php echo $row['author_id'] ?>">Delete</a>
                         <br><br>
                     <?php    }
                 }
@@ -50,7 +50,7 @@ if(empty($_SESSION))
 
             </div>
 
-            <a href="post/">
+            <a href="post.php?id=<?php echo $row["id"]?>">
                 <img class="img-responsive my-image " src="resource/images/<?php echo $row['cover'] ?>" alt="">
             </a>
 

@@ -13,11 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Amar Blog ! Home</title>
-    <style>
-        body{
-            background-image: url("resource/images/light-bg10.jpg");
-        }
-    </style>
+
+
+
     <link rel="stylesheet" href="resource/css/main.css">
     <link rel="stylesheet" href="resource/css/bootstrap.css">
     <link rel="stylesheet" href="resource/css/blog-home.css">
@@ -43,7 +41,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="/">
-                <img class="nav-img" src="resource/images/amarblog5.png" alt="" height="35px" width="40px;"> আমার ব্লগ
+                <img class="nav-img" src="resource/images/amarblog5.png" alt="" height="35px" width="35px;"> আমার ব্লগ
             </a>
         </div>
 
