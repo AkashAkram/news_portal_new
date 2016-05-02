@@ -200,5 +200,15 @@ a:hover{
     text-decoration: none;
 }
 
-
+.scrollToTop {
+    bottom: 100px;
+    display: none;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    width: 40px;
+}
 /* -------------------------------- Body part end ---------------------------------------  */

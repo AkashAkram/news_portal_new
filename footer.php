@@ -46,6 +46,9 @@
         </div>
 
 </div>
+<a class="btn scrollToTop" href="#">
+    <i class="fa fa-angle-up"></i>
+</a>
 </div>
 
 <!-- JavaScript

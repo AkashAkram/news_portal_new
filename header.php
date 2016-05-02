@@ -73,7 +73,7 @@
                             <li><a href="dashboard"><i class=""></i>Dashboard</a></li>
                         <?php } ?>
                         <li><a href="myblog.php"><i class=""></i>My Blogs</a></li>
-                        <li><a href="myprofile/<?php ?>"><i class=""></i>Profile</a></li>
+                        <li><a href="myprofile.php"><i class=""></i>Profile</a></li>
                         <li><a href="Controller/logoutController.php"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                     </ul>
                 </li>
