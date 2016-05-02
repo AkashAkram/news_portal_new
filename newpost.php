@@ -29,12 +29,6 @@ $select = new Select();
                         </div>
                     </div>
 
-
-                    <div class="form-group">
-                        <div class="col-md-6">
-                            <input type="hidden" class="form-control" name="author" value="authorname" >
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label class="col-md-4 control-label">Category</label>
                         <div class="col-md-6">

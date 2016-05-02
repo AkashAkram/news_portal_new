@@ -23,7 +23,7 @@ if(isset($_POST['login']))
     {
         $mysession = new Session();
         $mysession->SessionInit($user[0]);
-        header("Location: ../index.php");
+        header("Location: ../");
     }
     else
     {
