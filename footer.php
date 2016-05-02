@@ -41,7 +41,7 @@
             <!-- Side Widget well-custom -->
             <div class="">
                 <br>
-                <p> <center><a href="http://akashakram.xyz"><b>Akash Akram &copy; 2016</b></a></center> </p>
+                <p> <center><a href="http://akashakram.xyz"><b>Amar blog &copy; 2016</b></a></center> </p>
             </div>
         </div>
 
