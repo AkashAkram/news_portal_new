@@ -30,9 +30,9 @@ if(empty($_SESSION))
                 <a href="post.php?id=<?php echo $row["id"]?>"> <?php echo $row["title"] ?></a>
             </h2>
             <p >
-                by <a href="/"><?php echo $author[0]['name'] ?></a> |
-                Category: <a href="/"><?php echo $category[0]['name'] ?></a> |
-                <span class="glyphicon glyphicon-time"></span> <?php echo $row['created_at'] ?>
+                by <a href="sortbyuser.php?user_id=<?php echo $author[0]['id'] ?>"><?php echo $author[0]['name'] ?></a> |
+                Category <a href="sortbycategory.php?cat_id=<?php echo $category[0]['id'] ?>"><?php echo $category[0]['name'] ?></a> |
+                <span class="glyphicon glyphicon-time"></span> <?php echo $row[0]['created_at'] ?>
 
             </p>
 

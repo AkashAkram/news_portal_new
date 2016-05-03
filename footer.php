@@ -29,7 +29,7 @@
                     $sql =  "SELECT * FROM categories";
                     $rows = $select->SelectRow($sql);
                     foreach($rows as $row){ ?>
-                        <li value=""><a href="category/<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></li>
+                        <li value=""><a href="sortbycategory.php?cat_id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></li>
                     <?php  } ?>
                 </ul>
 

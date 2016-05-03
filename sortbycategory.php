@@ -1,11 +1,29 @@
-
 <?php
-    include('header.php');
-    include "Controller/indexController.php";
+/**
+ * Created by PhpStorm.
+ * User: akash
+ * Date: 03-May-16
+ * Time: 12:37 PM
+ */
+
+//echo $_GET['cat_id'];
+include "header.php";
+include('Model/SelectClass.php');
+
+$select = new Select();
+$sql1 =  "SELECT * FROM articles WHERE `category_id` = '".$_GET['cat_id']."' ORDER BY id DESC ";
+$rows = $select->SelectRow($sql1);
+
+$sql4 =  "SELECT * FROM  `categories` WHERE `id` = '".$_GET['cat_id']."' ORDER BY id DESC ";
+$category = $select->SelectRow($sql4);
 ?>
-
 <div class="col-md-8">
-
+    <div class="well" align="center">
+        <div align="right">
+            <a class="btn-close hover-animate" href="../"></a>
+        </div>
+        <h2>All articles in category <?php echo $category[0]['name'] ?></h2>
+    </div>
 <?php
 foreach ($rows as $row)
 {
@@ -32,15 +50,15 @@ foreach ($rows as $row)
 
         <div align="right">
 
-        <?php
+            <?php
             if(!empty($_SESSION)){
                 if($row['author_id']==$_SESSION['id']){ ?>
                     <a href="update.php?post_id=<?php echo $row['id'] ?>">update</a> |
                     <a href="Controller/deleteController.php?delete_post=<?php echo $row['id'] ?>&author_id=<?php echo $row['author_id'] ?>">Delete</a>
                     <br><br>
-        <?php    }
+                <?php    }
             }
-        ?>
+            ?>
 
         </div>
 
@@ -55,9 +73,11 @@ foreach ($rows as $row)
     </div>
 
 
-    <?php } ?>
+<?php } ?>
 
 </div>
 
 
-    <?php include('footer.php'); ?>
+<?php include('footer.php'); ?>
+
+
