@@ -18,7 +18,7 @@ $sql4 =  "SELECT * FROM  `categories` WHERE `id` = '".$_GET['cat_id']."' ORDER B
 $category = $select->SelectRow($sql4);
 ?>
 <div class="col-md-8">
-    <div class="well" align="center">
+    <div class="well">
         <div align="right">
             <a class="btn-close hover-animate" href="../"></a>
         </div>

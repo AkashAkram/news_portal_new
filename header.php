@@ -63,7 +63,7 @@
                 <li class=" "><a href="newpost.php">Create New</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <img src="resource/images/blog-cover.JPG" alt="" width="20" height="17">
+                        <img src="resource/images/profile.JPG" alt="" width="20" height="17">
                         <?php echo $_SESSION['name']; ?> <span class="caret"></span>
                     </a>
 

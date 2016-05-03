@@ -18,7 +18,7 @@ if(empty($_SESSION) or $_SESSION['id']!=$_GET['author_id'])
     WHERE `id` = '".$_GET['delete_post']."' ";
     $result = $delete->DeleteRow($sql);
 
-header("Location: http://localhost/amarblog-raw/");
+header("Location: ../");
 
 //}
 
