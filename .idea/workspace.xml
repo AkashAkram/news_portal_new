@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3b4adc42-6058-4c3b-842d-e1021d7fdcf2" name="Default" comment="Commit 4">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sortbycategory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sortbyuser.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/myprofileController.php" afterPath="$PROJECT_DIR$/Controller/myprofileController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyBlog.php" afterPath="$PROJECT_DIR$/MyBlog.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/post.php" afterPath="$PROJECT_DIR$/post.php" />
+    <list default="true" id="3b4adc42-6058-4c3b-842d-e1021d7fdcf2" name="Default" comment="phpstorm commitv test">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sortbyuser.php" afterPath="$PROJECT_DIR$/sortbyuser.php" />
     </list>
     <ignored path="amarblog-raw.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,14 +50,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myblog.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="myblog.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myblog.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="273">
-              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+              <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
               <folding>
-                <marker date="1462257199344" expanded="true" signature="256:312" placeholder="SELECT * FRO... users" />
-                <marker date="1462257199344" expanded="true" signature="378:441" placeholder="SELECT * FRO... categories" />
+                <marker date="1462261680703" expanded="true" signature="256:312" placeholder="SELECT * FRO... users" />
+                <marker date="1462261680703" expanded="true" signature="378:441" placeholder="SELECT * FRO... categories" />
               </folding>
             </state>
           </provider>
@@ -87,16 +80,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sortbyuser.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sortbyuser.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sortbyuser.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="461">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding>
-                <marker date="1462259283680" expanded="true" signature="206:288" placeholder="SELECT * FRO... articles" />
-                <marker date="1462259283680" expanded="true" signature="338:413" placeholder="SELECT * FRO... users" />
-                <marker date="1462259283680" expanded="true" signature="779:835" placeholder="SELECT * FRO... users" />
-                <marker date="1462259283680" expanded="true" signature="892:955" placeholder="SELECT * FRO... categories" />
+                <marker date="1462261519899" expanded="true" signature="206:288" placeholder="SELECT * FRO... articles" />
+                <marker date="1462261519899" expanded="true" signature="339:414" placeholder="SELECT * FRO... users" />
+                <marker date="1462261519899" expanded="true" signature="780:836" placeholder="SELECT * FRO... users" />
+                <marker date="1462261519899" expanded="true" signature="893:956" placeholder="SELECT * FRO... categories" />
               </folding>
             </state>
           </provider>
@@ -233,11 +226,11 @@
         <option value="$PROJECT_DIR$/Controller/myprofileController.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/post.php" />
-        <option value="$PROJECT_DIR$/myblog.php" />
         <option value="$PROJECT_DIR$/sortbycategory.phtml" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/sortbycategory.php" />
         <option value="$PROJECT_DIR$/sortbyuser.php" />
+        <option value="$PROJECT_DIR$/myblog.php" />
       </list>
     </option>
   </component>
@@ -286,7 +279,14 @@
     <panes>
       <pane id="Scope" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="amarblog-raw" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scratches" />
     </panes>
@@ -374,7 +374,7 @@
       <workItem from="1462082617829" duration="10935000" />
       <workItem from="1462155689188" duration="19669000" />
       <workItem from="1462207896163" duration="1357000" />
-      <workItem from="1462254491977" duration="5216000" />
+      <workItem from="1462254491977" duration="6263000" />
     </task>
     <task id="LOCAL-00001" summary="Ist Commit">
       <created>1461589489220</created>
@@ -387,14 +387,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156208000" />
+    <option name="totallyTimeSpent" value="157255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18986385" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18986385" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2082019" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -402,7 +403,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41503268" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -450,7 +450,8 @@
     <option name="USE_COMMIT_MESSAGE_MARGIN" value="true" />
     <MESSAGE value="Ist Commit" />
     <MESSAGE value="Commit 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit 4" />
+    <MESSAGE value="phpstorm commitv test" />
+    <option name="LAST_COMMIT_MESSAGE" value="phpstorm commitv test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -738,17 +739,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myblog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding>
-            <marker date="1462257199344" expanded="true" signature="256:312" placeholder="SELECT * FRO... users" />
-            <marker date="1462257199344" expanded="true" signature="378:441" placeholder="SELECT * FRO... categories" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/myprofileController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -810,13 +800,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sortbyuser.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="461">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
-            <marker date="1462259283680" expanded="true" signature="206:288" placeholder="SELECT * FRO... articles" />
-            <marker date="1462259283680" expanded="true" signature="338:413" placeholder="SELECT * FRO... users" />
-            <marker date="1462259283680" expanded="true" signature="779:835" placeholder="SELECT * FRO... users" />
-            <marker date="1462259283680" expanded="true" signature="892:955" placeholder="SELECT * FRO... categories" />
+            <marker date="1462261519899" expanded="true" signature="206:288" placeholder="SELECT * FRO... articles" />
+            <marker date="1462261519899" expanded="true" signature="339:414" placeholder="SELECT * FRO... users" />
+            <marker date="1462261519899" expanded="true" signature="780:836" placeholder="SELECT * FRO... users" />
+            <marker date="1462261519899" expanded="true" signature="893:956" placeholder="SELECT * FRO... categories" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myblog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
+          <folding>
+            <marker date="1462261680703" expanded="true" signature="256:312" placeholder="SELECT * FRO... users" />
+            <marker date="1462261680703" expanded="true" signature="378:441" placeholder="SELECT * FRO... categories" />
           </folding>
         </state>
       </provider>

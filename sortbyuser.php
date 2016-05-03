@@ -14,6 +14,7 @@ $select = new Select();
 $sql1 =  "SELECT * FROM articles WHERE `author_id` = '".$_GET['user_id']."' ORDER BY id DESC ";
 $rows = $select->SelectRow($sql1);
 
+
 $sql4 =  "SELECT * FROM  `users` WHERE `id` = '".$_GET['user_id']."' ORDER BY id DESC ";
 $user = $select->SelectRow($sql4);
 
