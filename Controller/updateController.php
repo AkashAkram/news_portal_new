@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../Model/SelectClass.php');
+//include('../Model/SelectClass.php');
 include('../Model/UpdateClass.php');
 include "../Model/SessionClass.php";
 

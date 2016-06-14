@@ -6,6 +6,7 @@ include('header.php');
 include "Controller/postController.php";
 
 ?>
+<div class="col-md-2"></div>
 
 <div class="col-md-8">
 
@@ -20,7 +21,7 @@ include "Controller/postController.php";
 
         <div class="well">
             <div align="right">
-                <a class="btn-close hover-animate" href="../"></a>
+                <a class="btn-close hover-animate" href="http://localhost/xmp/news_portal/"></a>
             </div>
             <h2>
                 <a href="post.php?id=<?php echo $row[0]["id"]?>"> <?php echo $row[0]["title"] ?></a>
@@ -60,4 +61,4 @@ include "Controller/postController.php";
 </div>
 
 
-<?php include('footer.php'); ?>
+<div class="col-md-2"></div>

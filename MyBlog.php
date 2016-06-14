@@ -66,4 +66,4 @@ if(empty($_SESSION))
 </div>
 
 
-<?php include('footer.php'); ?>
+<?php //include('footer.php'); ?>

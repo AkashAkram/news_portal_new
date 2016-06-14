@@ -2,7 +2,7 @@
 //session_start();
 
 include('header.php');
-include('Model/SelectClass.php');
+//include('Model/SelectClass.php');
 
 
 
@@ -29,7 +29,10 @@ else{
 }
 
 ?>
-
+    
+    <div class="col-md-2">
+    </div>
+    
     <div class="col-md-8">
         <div class="panel panel-default">
             <div class="panel-heading"><h4>Edit post</h4></div>
@@ -72,7 +75,7 @@ else{
                         <div class="form-group">
                             <label class="col-md-4 control-label">Article</label>
                             <div class="col-md-6">
-                                <textarea  class="post"  class="form-control" name="body" required><?php echo $blog[0]['body'] ?></textarea>
+                                <textarea   class="form-control" name="body" required><?php echo $blog[0]['body'] ?></textarea>
                             </div>
                         </div>
 
@@ -90,10 +93,10 @@ else{
         </div>
     </div>
 
-<?php include('footer.php'); ?>
+
+    <div class="col-md-2">
+    </div>
+    
+<?php// include('footer.php'); ?>
 
 
-
-<?php
-
-?>

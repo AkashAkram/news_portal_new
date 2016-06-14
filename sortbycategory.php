@@ -8,7 +8,7 @@
 
 //echo $_GET['cat_id'];
 include "header.php";
-include('Model/SelectClass.php');
+//include('Model/SelectClass.php');
 
 $select = new Select();
 $sql1 =  "SELECT * FROM articles WHERE `category_id` = '".$_GET['cat_id']."' ORDER BY id DESC ";
@@ -17,12 +17,16 @@ $rows = $select->SelectRow($sql1);
 $sql4 =  "SELECT * FROM  `categories` WHERE `id` = '".$_GET['cat_id']."' ORDER BY id DESC ";
 $category = $select->SelectRow($sql4);
 ?>
+
+<div class="col-md-2">
+</div>
 <div class="col-md-8">
     <div class="well">
         <div align="right">
-            <a class="btn-close hover-animate" href="../"></a>
+            <a class="btn-close hover-animate" href="http://localhost/xmp/news_portal/"></a>
         </div>
-        <h2>All articles in category <?php echo $category[0]['name'] ?></h2>
+        <h1>All News in <?php echo $category[0]['name'] ?></h1>
+        <hr>
     </div>
 <?php
 foreach ($rows as $row)
@@ -39,7 +43,7 @@ foreach ($rows as $row)
     <div class="well">
         <h2>
             <a href="post.php?id=<?php echo $row["id"]?>"> <?php echo $row["title"] ?></a>
-        </h2>
+        </h2><br><br>
         <p >
             by <a href="sortbyuser.php?user_id=<?php echo $author[0]['id'] ?>"><?php echo $author[0]['name'] ?></a> |
             Category <a href="sortbycategory.php?cat_id=<?php echo $category[0]['id'] ?>"><?php echo $category[0]['name'] ?></a> |
@@ -78,6 +82,6 @@ foreach ($rows as $row)
 </div>
 
 
-<?php include('footer.php'); ?>
 
-
+<div class="col-md-2">
+</div>

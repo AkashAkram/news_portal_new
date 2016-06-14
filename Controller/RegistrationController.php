@@ -9,7 +9,7 @@
 session_start();
 
 include  ('../Model/InsertClass.php');
-include  ('../Model/SelectClass.php');
+//include  ('../Model/SelectClass.php');
 
 
 if(isset($_POST['register']))

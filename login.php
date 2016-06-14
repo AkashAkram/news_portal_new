@@ -1,6 +1,6 @@
 <?php
 include ('header.php');
-include ('Model/SelectClass.php');
+
     //session_start();
 
 if(!empty($_SESSION))

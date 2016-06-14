@@ -1,7 +1,7 @@
 <?php
 session_start();
 include('../Model/DeleteClass.php');
-include "../Model/SessionClass.php";
+//include "../Model/SessionClass.php";
 
 //echo "Session id = ".$_SESSION['id']."<br>";
 //echo "Author id = ".$_GET['author_id'];

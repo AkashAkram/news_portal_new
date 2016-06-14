@@ -1,6 +1,5 @@
 <?php session_start();
-//var_dump($_SESSION);
-
+include ('Model/SelectClass.php');
 ?>
 
 
@@ -13,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>আমার ব্লগ</title>
+    <title>News Portal</title>
 
 
 
@@ -21,12 +20,16 @@
     <link rel="stylesheet" href="resource/css/bootstrap.css">
     <link rel="stylesheet" href="resource/css/blog-home.css">
     <link rel="stylesheet" href="resource/css/light-theme.css">
+    <link rel="stylesheet" href="resource/css/style.css">
+
+    <script src="resource/js/jquery-1.7.2.min.js"></script>
+
 </head>
 
 
 
 <body id="app-layout">
-<nav class="navbar navbar-akash navbar-fixed-top">
+<nav class="header_top navbar-default">
     <div class="container">
         <div class="navbar-header">
 
@@ -41,21 +44,27 @@
             </button>
 
             <!-- Branding Image -->
-            <a class="navbar-brand" href="/">
-                <img class="nav-img" src="resource/images/amarblog5.png" alt="" height="35px" width="35px;"> আমার ব্লগ
+            <a class="navbar-brand" href="http://localhost/xmp/news_portal">
+                 News Portal
             </a>
         </div>
-
+                    <div class="search_box">
+                            <form>
+                                <input class="" type="text" class="" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                                <input type="submit" value="">
+                            </form>
+                    </div>
+            
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
 
-
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
-                <!-- Authentication Links
-
-                @if () -->
+                
+                    
+                
                 <?php if (empty($_SESSION)){ ?>
+                
                 <li><a href="login.php">Login</a></li>
                 <li><a href="register.php">Register</a></li>
 
@@ -82,6 +91,30 @@
         </div>
     </div>
 </nav>
+
+
+            <div class="header_bottom margin-bottom-10 container">
+                <div class="menu">
+
+                     <ul class="mymenu">
+                    <?php
+                    $select = new Select();
+                    $sql =  "SELECT * FROM categories";
+                    $rows = $select->SelectRow($sql);
+                    foreach($rows as $row){ ?>
+
+                        <li><a class="" href="sortbycategory.php?cat_id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?><b class="caret"></b></a>
+                        </li>
+                    <?php  } ?>
+                       
+                </ul>
+
+            </div>
+                    
+                     
+                
+                <div class="clear"></div>
+            </div>
 
 <div class="container" align="center">
     <div class="row" align="center" style="text-align: justify">

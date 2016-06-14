@@ -1,7 +1,7 @@
 <!--Main colomn div</div>-->
 
 <!-- Sidebar Widgets-->
-        <div class="col-md-4">
+        <div class="col-md-3">
 
             <!-- Blog Search well-custom -->
             <div class="well-custom">
@@ -15,10 +15,6 @@
                                 </span>
                 </div>
                 <!-- /.input-group -->
-            </div>
-
-            <!-- Blog Categories well-custom-custom -->
-            <div class="well-custom">
                 <h4>Blog Categories</h4>
 
 

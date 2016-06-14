@@ -146,17 +146,19 @@ a:hover{
     color: #000000;
 }
 .well{
-    background-color: rgb(0,0,0); /* RGBA Fallback to RGB to support old browsers */
-    background-color: rgba(0,0,0,0.12); /* H1 HTML Heading tag with black color with 50% opacity */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px 40px;
     margin-bottom: 20px;
     border-radius: 4px;
-    box-shadow: 0px 0px 7px #000000;
+    box-shadow: 0px 0px 0px #000000;
     color: #000000;
 }
 
 .well h2 a{
-    font-family: Verdana;
+    font-family: Verdana ;
+    font-size: 30px; 
     color: #ffffff;
     text-shadow: 2px 2px #222;
 }
@@ -168,14 +170,18 @@ a:hover{
 
 .well-custom{
 
-    background-color: rgb(0,0,0); /* RGBA Fallback to RGB to support old browsers */
-    background-color: rgba(0,0,0,0.12); /* H1 HTML Heading tag with black color with 50% opacity */
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 4px;
-    box-shadow: 0px 0px 7px #000000;
-
-
+    margin-left: 9px;
+    margin-right:9px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  background-color: transparent;
+  border-radius: 0;
+  width: 250px;
+  float: left;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.5);
+          box-shadow: 0 0 5px rgba(0,0,0,0.5);;
+  
 
 }
 
@@ -212,3 +218,36 @@ a:hover{
     width: 40px;
 }
 /* -------------------------------- Body part end ---------------------------------------  */
+
+
+
+/*       Panel grid            */
+
+
+.panel-grid {
+    margin-left: 20px;
+    margin-right:20px;
+  margin-bottom: 0px;
+  position: relative;
+  margin-top: auto;
+  background-color: transparent;
+  border-radius: 0;
+  width: 300px;
+  height: 550px;
+  float: left;
+  padding: 10px;
+  
+}
+
+
+
+.panel-grid h2 a{
+ font-size: 30px;
+
+}
+.panel-grid-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}

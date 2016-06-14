@@ -7,7 +7,7 @@
  */
 
 
-include('Model/SelectClass.php');
+//include('Model/SelectClass.php');
 
 $select = new Select();
 $sql1 =  "SELECT * FROM articles WHERE `id` = '".$_GET['id']."' ";

@@ -2,7 +2,7 @@
 //session_start();
 
 include ('header.php');
-include ('Model/SelectClass.php');
+//include ('Model/SelectClass.php');
 
 
 if(!empty($_SESSION))

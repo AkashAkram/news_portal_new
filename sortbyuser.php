@@ -8,7 +8,7 @@
 
 //echo $_GET['cat_id'];
 include "header.php";
-include('Model/SelectClass.php');
+//include('Model/SelectClass.php');
 
 $select = new Select();
 $sql1 =  "SELECT * FROM articles WHERE `author_id` = '".$_GET['user_id']."' ORDER BY id DESC ";
@@ -19,10 +19,12 @@ $sql4 =  "SELECT * FROM  `users` WHERE `id` = '".$_GET['user_id']."' ORDER BY id
 $user = $select->SelectRow($sql4);
 
 ?>
+<div class="col-md-2"></div>
+
 <div class="col-md-8">
     <div class="well" align="center">
         <div align="right">
-            <a class="btn-close hover-animate" href="../"></a>
+            <a class="btn-close hover-animate" href="http://localhost/xmp/news_portal/"></a>
         </div>
         <h2>All articles posted By <?php echo $user[0]['name'] ?></h2>
     </div>
@@ -80,6 +82,8 @@ foreach ($rows as $row)
 </div>
 
 
-<?php include('footer.php'); ?>
+<div class="col-md-2"></div>
+
+<?php //include('footer.php'); ?>
 
 

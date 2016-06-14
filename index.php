@@ -4,7 +4,7 @@
     include "Controller/indexController.php";
 ?>
 
-<div class="col-md-8">
+<div class="col-md-12">
 
 <?php
 foreach ($rows as $row)
@@ -18,14 +18,14 @@ foreach ($rows as $row)
 
     ?>
 
-    <div class="well">
+    <div class="panel-grid">
         <h2>
             <a href="post.php?id=<?php echo $row["id"]?>"> <?php echo $row["title"] ?></a>
         </h2>
         <p >
-            by <a href="sortbyuser.php?user_id=<?php echo $author[0]['id'] ?>"><?php echo $author[0]['name'] ?></a> |
-            Category <a href="sortbycategory.php?cat_id=<?php echo $category[0]['id'] ?>"><?php echo $category[0]['name'] ?></a> |
-            <span class="glyphicon glyphicon-time"></span> <?php echo $row['created_at'] ?>
+            Reported by: <a href="sortbyuser.php?user_id=<?php echo $author[0]['id'] ?>"><?php echo $author[0]['name'] ?></a> <br>
+            Category <a href="sortbycategory.php?cat_id=<?php echo $category[0]['id'] ?>"><?php echo $category[0]['name'] ?></a> <br>
+            <span class="glyphicon glyphicon-time"></span> <?php echo $row['created_at'] ?><br>
 
 
         </p>
@@ -50,7 +50,7 @@ foreach ($rows as $row)
 
 
         <br>
-        <p class="well-p"><?php echo substr($row['body'],0,500) ?><br><br>
+        <p class="well-p"><?php echo substr($row['body'],0,200) ?><br><br>
             <a class="btn btn-primary" href="post.php?id=<?php echo $row["id"]?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 
@@ -60,4 +60,4 @@ foreach ($rows as $row)
 </div>
 
 
-    <?php include('footer.php'); ?>
+    <?php //include('footer.php'); ?>

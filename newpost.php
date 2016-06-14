@@ -3,7 +3,7 @@
 
 include('header.php');
 
-include('Model/SelectClass.php');
+//include('Model/SelectClass.php');
 include('Model/InsertClass.php');
 
 
@@ -13,6 +13,8 @@ $select = new Select();
 
 ?>
 
+<div class="col-md-2">
+</div>
 <div class="col-md-8">
     <div class="panel panel-default">
         <div class="panel-heading"><h4>Create New Blog</h4></div>
@@ -55,7 +57,7 @@ $select = new Select();
                     <div class="form-group">
                         <label class="col-md-4 control-label">Article</label>
                         <div class="col-md-6">
-                            <textarea  class="post"  class="form-control" name="body" required></textarea>
+                            <textarea class="form-control" name="body" required></textarea>
                         </div>
                     </div>
 
@@ -73,10 +75,7 @@ $select = new Select();
     </div>
 </div>
 
-<?php include('footer.php'); ?>
 
 
-
-<?php
-
-   ?>
+<div class="col-md-2">
+</div>
