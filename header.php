@@ -22,14 +22,14 @@ include ('Model/SelectClass.php');
     <link rel="stylesheet" href="resource/css/light-theme.css">
     <link rel="stylesheet" href="resource/css/style.css">
 
-    <script src="resource/js/jquery-1.7.2.min.js"></script>
+
 
 </head>
 
 
 
 <body id="app-layout">
-<nav class="header_top navbar-default">
+<nav class="navbar-akash">
     <div class="container">
         <div class="navbar-header">
 

@@ -60,4 +60,4 @@ foreach ($rows as $row)
 </div>
 
 
-    <?php //include('footer.php'); ?>
+    <?php include('footer.php'); ?>

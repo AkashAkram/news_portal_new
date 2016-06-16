@@ -85,3 +85,8 @@ foreach ($rows as $row)
 
 <div class="col-md-2">
 </div>
+
+
+<?php
+include ('footer.php');
+?>

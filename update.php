@@ -97,6 +97,6 @@ else{
     <div class="col-md-2">
     </div>
     
-<?php// include('footer.php'); ?>
+<?php include('footer.php'); ?>
 
 

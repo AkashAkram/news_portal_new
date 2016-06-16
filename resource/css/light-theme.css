@@ -5,45 +5,45 @@
 
 
 .navbar-akash {
-    background-color: rgba(0,0,0,0.5);
+    background-color: transparent;
     border: none;
     opacity: 0.8;
     box-shadow: 0px 0px 00px #000000;
 }
 .navbar-akash .navbar-brand {
     font-family: verdana;
-    font-weight: bold;
-    color: #ffffff;
+    font-weight: bolder;
+    color: red;
     background-color: transparent;
 
 }
 .navbar-akash .navbar-brand:hover,
 .navbar-akash .navbar-brand:focus {
-    color: #ffffff;
+    color: blue;
     background-color: transparent;
     background-color: transparent;
-    border-bottom: solid 5px #ffffff;
+    border-bottom: solid 2px skyblue;
 }
 .navbar-akash .navbar-text {
     color: orangered;
 }
 .navbar-akash .navbar-nav > li > a {
-    color: #ffffff;
+    color: green;
     font-family: verdana;
     
 }
 .navbar-akash .navbar-nav > li > a:hover,
 .navbar-akash .navbar-nav > li > a:focus {
-    color: #ffffff;
+    
     background-color: transparent;
-    height: 50px;
-    border-bottom: solid 5px #ffffff;
+    height: 45px;
+    border-bottom: solid 2px skyblue;
 
 }
 .navbar-akash .navbar-nav > .active > a,
 .navbar-akash .navbar-nav > .active > a:hover,
 .navbar-akash .navbar-nav > .active > a:focus {
-    color: #fff;
+    color: green;
     background-color: orangered;
 }
 .navbar-akash .navbar-nav > .disabled > a,
@@ -53,13 +53,15 @@
     background-color: transparent;
 }
 .navbar-akash .navbar-toggle {
-    border-color: #333;
+    border-color: #000000;
 }
 .navbar-akash .navbar-toggle:hover,
 .navbar-akash .navbar-toggle:focus {
     background-color: black;
+    color: red;
 }
 .navbar-akash .navbar-toggle .icon-bar {
+    background-color: green;
 
 }
 .navbar-akash .navbar-collapse,
@@ -69,8 +71,8 @@
 .navbar-akash .navbar-nav > .open > a,
 .navbar-akash .navbar-nav > .open > a:hover,
 .navbar-akash .navbar-nav > .open > a:focus {
-    color: #fff;
-    background-color: #000000;
+    
+    background-color: transparent;
 }
 @media (max-width: 767px) {
     .navbar-akash .navbar-nav .open .dropdown-menu > .dropdown-header {

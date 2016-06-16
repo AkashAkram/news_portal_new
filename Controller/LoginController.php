@@ -3,7 +3,7 @@
 session_start();
 
 include "../Model/SessionClass.php";
-//include "../Model/SelectClass.php";
+include "../Model/SelectClass.php";
 
 
 
@@ -21,8 +21,8 @@ if(isset($_POST['login']))
     $sql = "SELECT * FROM users WHERE `email` = '".$email."' AND `password` = '".$hash_password."' ";
     $user = $select->SelectRow($sql);
     $pass = $user[0]['password'];
-    echo "Registered hash password : ".$pass." <br>";
-    echo "Login hash password : ".$hash_password." <br>";
+    //echo "Registered hash password : ".$pass." <br>";
+    //echo "Login hash password : ".$hash_password." <br>";
 
     if(count($user)>0)
     {
