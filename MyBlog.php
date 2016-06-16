@@ -11,6 +11,8 @@ if(empty($_SESSION))
 
 ?>
 
+<div class="col-md-2"></div>
+
 <div class="col-md-8">
 
     <?php
@@ -65,5 +67,7 @@ if(empty($_SESSION))
 
 </div>
 
+
+<div class="col-md-2"></div>
 
 <?php include('footer.php'); ?>
