@@ -3,15 +3,16 @@
 
 class Select
 {
-
-
-
+    //public $connect = mysqli_connect('localhost','root','','akashakr_news_portal');
+    public function __construct()
+    {
+        $this->connect = mysqli_connect('localhost','root','','akashakr_news_portal');
+    }
+ 
     public function SelectRow($query)
     {
-        $connect = mysqli_connect('localhost','root','','akashakr_news_portal');
-        //$connect = mysqli_connect('localhost','akashakr_akash','aa01914064500','akashakr_project');
 
-        $result = mysqli_query($connect,$query);
+        $result = mysqli_query($this->connect,$query);
         $rows = array();
         while ($row = mysqli_fetch_assoc($result)) {
             $rows[] = $row;

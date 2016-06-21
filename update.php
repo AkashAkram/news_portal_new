@@ -4,15 +4,13 @@
 include('header.php');
 //include('Model/SelectClass.php');
 
-
-
-$select = new Select();
+$crud = new Crud();
 
 $sql1 =  "SELECT * FROM categories";
-$rows = $select->SelectRow($sql1);
+$rows = $crud->SelectRow($sql1);
 
 $sql2 = "SELECT * FROM `articles` WHERE `id` = '".$_GET['post_id']."'";
-$blog = $select->SelectRow($sql2);
+$blog = $crud->SelectRow($sql2);
 
 
 //echo $blog[0]['author_id'];

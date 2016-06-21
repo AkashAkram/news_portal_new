@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('../Model/DeleteClass.php');
+include('../Model/CrudClass.php');
 //include "../Model/SessionClass.php";
 
 //echo "Session id = ".$_SESSION['id']."<br>";
@@ -13,10 +13,10 @@ if(empty($_SESSION) or $_SESSION['id']!=$_GET['author_id'])
 
 
 //else{
-    $delete = new Delete();
+    $crud = new Crud();
     $sql = "DELETE FROM `articles`
     WHERE `id` = '".$_GET['delete_post']."' ";
-    $result = $delete->DeleteRow($sql);
+    $result = $crud->DeleteRow($sql);
 
 header("Location: ../");
 

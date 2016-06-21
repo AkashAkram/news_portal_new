@@ -18,13 +18,13 @@ if(empty($_SESSION))
     <?php
     foreach ($rows as $row)
     {
-        $select = new Select();
+        $crud = new Crud();
 
         $sql2 = "SELECT * FROM users WHERE `id` = '".$row['author_id']."'";
-        $author = $select->SelectRow($sql2);
+        $author = $crud->SelectRow($sql2);
 
         $sql3 = "SELECT * FROM categories WHERE `id` = '".$row['category_id']."'";
-        $category = $select->SelectRow($sql3);
+        $category = $crud->SelectRow($sql3);
         ?>
 
         <div class="well">

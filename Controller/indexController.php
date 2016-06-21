@@ -7,8 +7,13 @@
  */
 
 //include('Model/SelectClass.php');
+$crud = new Crud();
 
-$select = new Select();
-$sql1 =  "SELECT * FROM articles ORDER BY id DESC ";
-$rows = $select->SelectRow($sql1);
+
+$sql1 =  "SELECT * FROM categories";
+$categories = $crud->SelectRow($sql1);
+
+
+$sql2 =  "SELECT * FROM articles ORDER BY id DESC ";
+$posts = $crud->SelectRow($sql2);
 

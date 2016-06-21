@@ -4,11 +4,9 @@
 include('header.php');
 
 //include('Model/SelectClass.php');
-include('Model/InsertClass.php');
+include('Model/CrudClass.php');
 
-
-$insert = new Insert();
-$select = new Select();
+$crud = new Crud();
 
 
 ?>
@@ -38,7 +36,7 @@ $select = new Select();
                             <select name="category_id" id="" class="form-control">
                                 <?php
                                 $sql =  "SELECT * FROM categories";
-                                $rows = $select->SelectRow($sql);
+                                $rows = $crud->SelectRow($sql);
                                 foreach($rows as $row){
                                 ?>
                                     <option value="<?php echo $row['id'] ?>"><?php echo $row['name'] ?></option>

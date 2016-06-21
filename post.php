@@ -11,17 +11,16 @@ include "Controller/postController.php";
 <div class="col-md-8">
 
     <?php
-
         $sql2 = "SELECT * FROM users WHERE `id` = '".$row[0]['author_id']."'";
-        $author = $select->SelectRow($sql2);
+        $author = $crud->SelectRow($sql2);
 
         $sql3 = "SELECT * FROM categories WHERE `id` = '".$row[0]['category_id']."'";
-        $category = $select->SelectRow($sql3);
+        $category = $crud->SelectRow($sql3);
         ?>
 
-        <div class="well">
+        <div class="">
             <div align="right">
-                <a class="btn-close hover-animate" href="http://localhost/xmp/news_portal/"></a>
+                <a class="btn-close hover-animate" href="index.php"></a>
             </div>
             <h2>
                 <a href="post.php?id=<?php echo $row[0]["id"]?>"> <?php echo $row[0]["title"] ?></a>

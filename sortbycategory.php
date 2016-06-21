@@ -9,38 +9,36 @@
 //echo $_GET['cat_id'];
 include "header.php";
 //include('Model/SelectClass.php');
-
-$select = new Select();
+$crud = new Crud();
 $sql1 =  "SELECT * FROM articles WHERE `category_id` = '".$_GET['cat_id']."' ORDER BY id DESC ";
-$rows = $select->SelectRow($sql1);
+$rows = $crud->SelectRow($sql1);
 
 $sql4 =  "SELECT * FROM  `categories` WHERE `id` = '".$_GET['cat_id']."' ORDER BY id DESC ";
-$category = $select->SelectRow($sql4);
+$category = $crud->SelectRow($sql4);
 ?>
 
 <div class="col-md-2">
 </div>
 <div class="col-md-8">
-    <div class="well">
+    <div class="">
         <div align="right">
-            <a class="btn-close hover-animate" href="http://localhost/xmp/news_portal/"></a>
+            <a class="btn-close hover-animate" href="index.php"></a>
         </div>
-        <h1>All News in <?php echo $category[0]['name'] ?></h1>
-        <hr>
+        <h1>All News in <?php echo $category[0]['name'] ?>: </h1>
+        
     </div>
 <?php
 foreach ($rows as $row)
 {
-    $select = new Select();
 
     $sql2 = "SELECT * FROM users WHERE `id` = '".$row['author_id']."'";
-    $author = $select->SelectRow($sql2);
+    $author = $crud->SelectRow($sql2);
     $sql3 = "SELECT * FROM categories WHERE `id` = '".$row['category_id']."'";
-    $category = $select->SelectRow($sql3);
+    $category = $crud->SelectRow($sql3);
 
     ?>
 
-    <div class="well">
+    <div class="">
         <h2>
             <a href="post.php?id=<?php echo $row["id"]?>"> <?php echo $row["title"] ?></a>
         </h2><br><br>

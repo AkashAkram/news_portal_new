@@ -7,6 +7,12 @@
  */
 
 session_start();
-//session_unset();
+//print_r($_SESSION);
+session_unset();
 session_destroy();
+$_SESSION = array();
+//print_r($_SESSION);
+
+
+//echo "<a href='../index.php'>Home</a>";
 header("Location: ../login.php");

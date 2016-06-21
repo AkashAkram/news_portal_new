@@ -1,14 +1,13 @@
 <?php
 session_start();
 //include('../Model/SelectClass.php');
-include('../Model/UpdateClass.php');
-include "../Model/SessionClass.php";
+include('../Model/CrudClass.php');
 
 
 
 if(isset($_POST['update']))
 {
-    $update = new Update();
+    $crud = new Crud();
 
     $image    = $_FILES['image']['name'];
     $tempName = $_FILES['image']['tmp_name'];
@@ -23,12 +22,11 @@ if(isset($_POST['update']))
     else
         $sql = "UPDATE `articles` SET `title` = '".$_POST['title']."', `category_id` = '".$_POST['category_id']."', `body` = '".$_POST['body']."' WHERE `articles`.`id` = '".$_SESSION['post_id']."'";
 
-    $result = $update->updateRow($sql);
+    $result = $crud->updateRow($sql);
 
         header("Location: ../index.php");
 
 
     $user = $_SESSION;
-    $mysession = new Session();
-    $mysession->SessionInit($user);
+    $crud->SessionInit($user);
 }

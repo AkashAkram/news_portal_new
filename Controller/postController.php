@@ -8,8 +8,7 @@
 
 
 //include('Model/SelectClass.php');
-
-$select = new Select();
+$crud = new Crud();
 $sql1 =  "SELECT * FROM articles WHERE `id` = '".$_GET['id']."' ";
-$row = $select->SelectRow($sql1);
+$row = $crud->SelectRow($sql1);
 

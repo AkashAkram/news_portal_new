@@ -10,8 +10,8 @@
 
 
 
-$select = new Select();
+$crud = new Crud();
 $sql1 =  "SELECT * FROM articles WHERE `author_id` = '".$_SESSION['id']."' ORDER BY id DESC ";
-$rows = $select->SelectRow($sql1);
+$rows = $crud->SelectRow($sql1);
 //var_dump($rows);
 

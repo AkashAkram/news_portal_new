@@ -2,15 +2,14 @@
 
 session_start();
 
-include "../Model/SessionClass.php";
-include "../Model/SelectClass.php";
+include "../Model/CrudClass.php";
 
 
 
 
 if(isset($_POST['login']))
 {
-    $select = new Select();
+    $crud = new Crud();
 
     $email = $_POST['email'] ;
     $password = $_POST['password'];
@@ -19,16 +18,16 @@ if(isset($_POST['login']))
     ));
 
     $sql = "SELECT * FROM users WHERE `email` = '".$email."' AND `password` = '".$hash_password."' ";
-    $user = $select->SelectRow($sql);
+    $user = $crud->SelectRow($sql);
     $pass = $user[0]['password'];
     //echo "Registered hash password : ".$pass." <br>";
     //echo "Login hash password : ".$hash_password." <br>";
 
     if(count($user)>0)
     {
-        $mysession = new Session();
-        $mysession->SessionInit($user[0]);
-        header("Location: ../");
+        $x=$crud->SessionInit($user[0]);
+        //header("Location: ../");
+        print_r($_SESSION);
     }
     else
     {
@@ -36,5 +35,5 @@ if(isset($_POST['login']))
     }
 
 
-
+echo "<a href='../index.php'>Home</a>";
 }

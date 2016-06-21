@@ -7,12 +7,10 @@
  */
 session_start();
 
-include "../Model/UpdateClass.php";
-include "../Model/SelectClass.php";
-include "../Model/SessionClass.php";
+include "../Model/CrudClass.php";
 
 
-$update = new Update();
+$crud = new Crud();
 if(isset($_POST['updateprofile']))
 {
 
@@ -39,14 +37,14 @@ if(isset($_POST['updateprofile']))
         $sql = "UPDATE `users` SET `name` = '".$_POST['name']."', `email` = '".$_POST['email']."'  WHERE `id` = '".$_SESSION['id']."'  ";
     }
 
-    $result = $update->updateRow($sql);
+    $result = $crud->updateRow($sql);
     if($result)
     {
-        $mysession = new Session();
-        $select = new Select();
+        
+        
         $sql2 = "SELECT * FROM users WHERE `id` = '".$_SESSION['id']."' ";
-        $user = $select->SelectRow($sql2);
-        $mysession->SessionInit($user[0]);
+        $user = $crud->SelectRow($sql2);
+        $crud->SessionInit($user[0]);
 
 //var_dump($user);
        header("Location: ../index.php");
