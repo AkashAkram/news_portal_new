@@ -38,7 +38,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="index.php">Home</a></li>
                         <?php if(!empty($_SESSION)){ ?>                                     
                             <li><a href="Controller/logoutController.php">Logout</a></li>
-                            <li><a href="profile.php?id=<?php echo $_SESSION['id'] ?>"><?php echo $_SESSION['name'] ?></a></li>
+                            <li><a href="profile.php"><?php echo $_SESSION['name'] ?></a></li>
+                            <!--?id=<?php// echo $_SESSION['id'] ?>-->
                         <?php } else{ ?>
                             <li><a href="login.php">Login</a></li>     
                             <li><a href="register.php">Register</a></li>

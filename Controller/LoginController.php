@@ -26,8 +26,8 @@ if(isset($_POST['login']))
     if(count($user)>0)
     {
         $x=$crud->SessionInit($user[0]);
-        //header("Location: ../");
-        print_r($_SESSION);
+        header("Location: ../");
+        //print_r($_SESSION);
     }
     else
     {
@@ -35,5 +35,5 @@ if(isset($_POST['login']))
     }
 
 
-echo "<a href='../index.php'>Home</a>";
+//echo "<a href='../index.php'>Home</a>";
 }
